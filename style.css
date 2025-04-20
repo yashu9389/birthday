@@ -1,0 +1,85 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: black;
+        }
+        .start-screen {
+            width: 100vw;
+            height: 100vh;
+            background: rgba(29, 46, 202, 0.751);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .start-button {
+            padding: 25px 45px;
+            font-size: 34px;
+            background: #151314;
+            color: white;
+            border: 4mm ridge blue;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        .hidden {
+            display: none;
+        }
+        .birthday-screen {
+            position: relative; /* Changed to relative for image positioning */
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: black;
+        }
+        .floating-item {
+            position: absolute;
+            font-size: 20px;
+            animation: floatUp 5s linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+        .shining-star {
+            position: absolute;
+            background: rgb(255, 255, 255);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+        .message-container { /* Added container for message and image */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .message {
+            font-size: 32px;
+            color: lightgray;
+            text-shadow: 2px 2px 4px black;
+            margin-bottom: 20px; /* Space between message and image */
+        }
+        .birthday-image {
+            max-width: 50vh; /* Adjust as needed */
+            max-height: 50vh; /* Adjust as needed */
+            object-fit: contain;/* Prevents image distortion */
+        }
+    
